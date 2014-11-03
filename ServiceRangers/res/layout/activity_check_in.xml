@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:stretchColumns="1"
+    tools:context="com.trixsoft.cityrangers.activity.CheckINActivity" >
+
+    <TableRow android:id="@+id/TableRow01" >
+
+        <TextView
+            android:id="@+id/label_latlng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/latlng" />
+
+        <TextView
+            android:id="@+id/latlng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow android:id="@+id/TableRow03" >
+
+        <TextView
+            android:id="@+id/label_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow android:id="@+id/TableRow04" >
+
+        <TextView
+            android:id="@+id/label_lastup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lastup" />
+
+        <TextView
+            android:id="@+id/lastup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow android:id="@+id/TableRow07" >
+
+        <TextView
+            android:id="@+id/label_deviceID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deviceID" />
+
+        <TextView
+            android:id="@+id/deviceID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+</TableLayout>

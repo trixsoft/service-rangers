@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Service Rangers</string>
-    <string name="welcome">Welcome to Nellore Municipal Corporation!</string>
-    <string name="action_settings">Settings</string>
-    <string name="checkin">Check In</string>
-    <string name="checkout">Check Out</string>
-    <string name="issues">Issues</string>
-    <string name="reports">Reports</string>
-    <string name="title_activity_checkin">CheckinActivity</string>
+    <string name="app_name">City Rangers</string>
     <string name="hello_world">Hello world!</string>
+     <string name="welcome">Welcome to NELLORE MAYOR WORKER TRACKING</string>
+    <string name="action_settings">Settings</string>
+    <string name="copyRight">Designed by TrixSoft Pvt. Ltd.</string>
+    <string name="title_activity_check_in">CheckINActivity</string>
+    <string name="title_activity_issueList">IssueList</string>
+    <string name="issueList">issueList</string>
 
+    
+    <string name="lastup">Updated:</string>
+    <string name="lastlatlng">Last Location: </string>
+    <string name="menu_settings">Menu Settings</string>
+    <string name="address">Address:</string>
+    <string name="enable_gps">Enable GPS</string>
+    <string name="enable_gps_dialog">GPS provider not enabled. Would you like to enable it?</string>
+    <string name="latlng">Current Location:</string>
+    <string name="unknown">--Unknown--</string>
+    <string name="no_gps_support">GPS provider not supported</string>
+    <string name="no_network_support">Network provider not supported</string>
+    <string name="view_position">View Position</string>
+    <string name="send_position">Send Position</string>
+    <string name="deviceID">Device ID</string>
 </resources>

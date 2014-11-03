@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context="com.trixsoft.cityrangers.activity.HomePage" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome" />
+
+    <Button
+        android:id="@+id/issueList"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="20dp"
+         android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:background="@drawable/button"
+        android:text="Issue List" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button"
+        android:text="Check IN" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/textView2"
+        android:background="@drawable/button"
+        android:text="Check Out" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/issueList"
+        android:layout_below="@+id/issueList"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="61dp"
+        android:text="@string/copyRight" />
+
+</RelativeLayout>
