@@ -54,4 +54,14 @@
         android:layout_marginTop="61dp"
         android:text="@string/copyRight" />
 
+    <Button
+        android:id="@+id/issueListCustom"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_above="@+id/textView2"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/issueList"
+        android:background="@drawable/button"
+        android:text="Custom Issue List" />
+
 </RelativeLayout>

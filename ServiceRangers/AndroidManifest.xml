@@ -38,6 +38,11 @@
             android:label="@string/title_activity_issueList" >
         </activity>
         
+         <activity
+            android:name="IssueListCustom"
+            android:label="@string/title_activity_issueListCustom" >
+        </activity>
+        
     </application>
 
 </manifest>
