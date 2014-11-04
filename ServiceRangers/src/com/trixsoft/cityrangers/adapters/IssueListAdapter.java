@@ -2,10 +2,7 @@ package com.trixsoft.cityrangers.adapters;
 
 import java.util.ArrayList;
 
-import com.trixsoft.cityrangers.activity.IssueListCustom;
-import com.trixsoft.cityrangers.activity.R;
-import com.trixsoft.cityrangers.model.IssuesModel;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -15,19 +12,22 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.trixsoft.cityrangers.activity.IssueListCustom;
+import com.trixsoft.cityrangers.activity.R;
+import com.trixsoft.cityrangers.model.IssuesModel;
 
 /********* Adapter class extends with BaseAdapter and implements with OnClickListener ************/
 public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 
 	private Activity activity;
-	private ArrayList customListValuesArray;
+	private ArrayList<IssuesModel> customListValuesArray;
 	private static LayoutInflater inflater = null;
 	public Resources res;
 	IssuesModel tempValues = null;
 
-	public IssueListAdapter(Activity a, ArrayList customListValuesArray,Resources res) {
+	public IssueListAdapter(Activity a, ArrayList<IssuesModel> customListValuesArray,Resources res) {
 		this.activity = a;
 		this.customListValuesArray = customListValuesArray;
 		inflater = (LayoutInflater) activity
@@ -39,7 +39,7 @@ public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 	@Override
 	public int getCount() {
 		if (customListValuesArray.size() <= 0)
-			return 1;
+			return -1;
 		return customListValuesArray.size();
 	}
 
@@ -55,6 +55,7 @@ public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 
 	public static class ViewHolder {
 
+		public TextView issueId;
 		public TextView issueDesc;
 		public TextView wardNumber;
 		public TextView textWide;
@@ -62,42 +63,55 @@ public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 
 	}
 
-	 /****** Depends upon data size called for each row , Create each ListView row *****/
+	 /****** Depends upon data size called for each row , Create each ListView row *****/	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		View vi = convertView;
-		ViewHolder holder;
-		Log.d("IssueListAdapter-getView","Position value is:"+position);
-		if (convertView == null) {
-			Log.d("IssueListAdapter", "converView is null");
-			
-			//Inflate tabitem.xml file for each row  
-			vi = inflater.inflate(R.layout.tabitem, null);
-			
-			//ViewHolder Object to hold model elements
-			holder = new ViewHolder();
-			holder.issueDesc = (TextView) vi.findViewById(R.id.issueDesc);
-			holder.wardNumber = (TextView) vi.findViewById(R.id.wardNumber);
-			vi.setTag(holder);
-		} else
-		{
-			holder = (ViewHolder) vi.getTag();
-			Log.d("IssueListAdapter", "converView is not null");
-		}
+		try {
+			View vi = convertView;
+			ViewHolder holder;
+			Log.d("IssueListAdapter-getView","Position value is:"+position);
+			if (convertView == null) {
+				Log.d("IssueListAdapter", "converView is null");
+				
+				//Inflate tabitem.xml file for each row  
+				vi = inflater.inflate(R.layout.custom_issue_display_list, null);
+				
+				//ViewHolder Object to hold model elements
+				holder = new ViewHolder();
+				holder.issueId=(TextView) vi.findViewById(R.id.issueId);
+				holder.issueDesc = (TextView) vi.findViewById(R.id.issueDesc);
+				holder.wardNumber = (TextView) vi.findViewById(R.id.wardNumber);
+				vi.setTag(holder);
+			} else
+			{
+				holder = (ViewHolder) vi.getTag();
+				Log.d("IssueListAdapter", "converView is not null");
+			}
 
-		if (customListValuesArray.size() <= 0) {
-			holder.issueDesc.setText("No Issues Assigned/Open");
-		} else {
-			tempValues = null;
-			tempValues = (IssuesModel) customListValuesArray.get(position);
-			holder.issueDesc.setText(tempValues.getIssueDesc());
-			holder.wardNumber.setText(tempValues.getWardNumber());
+			if (customListValuesArray.size() <= 0) {
+				holder.issueDesc.setText("No Issues Assigned/Open");
+			} else {
+				tempValues = null;
+				
+				tempValues = (IssuesModel) customListValuesArray.get(position);
+				Log.d("IssueListAdapter", "t1");
+				holder.issueId.setText(tempValues.getIssueId());
+				Log.d("IssueListAdapter", "t2");
+				holder.issueDesc.setText(tempValues.getIssueDesc());
+				Log.d("IssueListAdapter", "t3");
+				holder.wardNumber.setText(tempValues.getWardNumber());
+				Log.d("IssueListAdapter", "t4");
 
-			vi.setOnClickListener(new OnItemClickListener(position));
+				vi.setOnClickListener(new OnIssueClickListener(position));
+			}
+			Log.d("IssueListAdapter", "Exited Get view method");
+			return vi;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block			
+			e.printStackTrace();
+			return null;
 		}
-		Log.d("IssueListAdapter", "Exited Get view method");
-		return vi;
 	}
 
 	@Override
@@ -105,10 +119,10 @@ public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 		Log.v("CustomAdapter", "=====Row button clicked=====");
 	}
 
-	private class OnItemClickListener implements OnClickListener {
+	private class OnIssueClickListener implements OnClickListener {
 		private int mPosition;
 
-		OnItemClickListener(int position) {
+		OnIssueClickListener(int position) {
 			mPosition = position;
 		}
 

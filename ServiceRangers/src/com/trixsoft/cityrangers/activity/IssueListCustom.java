@@ -56,7 +56,7 @@ public class IssueListCustom extends Activity {
 		setListData();
 
 		Resources res = getResources();
-		listview = (ListView) findViewById(R.id.list); 														
+		listview = (ListView) findViewById(R.id.list01); 														
 
 		
 		Log.d("IssueListCustom-onCreate", "Issues List Size is:"+customListValuesArray.size());
@@ -111,8 +111,6 @@ public class IssueListCustom extends Activity {
 					/******** Take Model Object in ArrayList **********/
 					customListValuesArray.add(issueModel);					
 				}				
-			} else {
-
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
