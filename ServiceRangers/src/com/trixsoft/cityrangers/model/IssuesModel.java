@@ -1,57 +1,90 @@
 package com.trixsoft.cityrangers.model;
 
-public class IssuesModel {
-	private String issueDesc;
-	private String wardNumber;
-	private String createTS;
-	private String lastupdateTS;
-	private String issueId;
-	private String issueImageShort;
-	private String issueImageLong;
+import java.io.Serializable;
+
+public class IssuesModel implements Serializable  {
+	private String IS_ID;
+	private String IS_TITLE;
+	private String IS_DESC;	
+	private String IS_LOC;	
+	private String IS_MAP_LOC;
+	private String IS_ALLOC_TO;
+	private String IS_STATUS;
+	private String IS_LOGGED_BY;
+	private String IS_LOGGED_TS;
+	private String IS_ACCEPTED_TS;
+	private String IS_RESOLVED_TS;
 	
 	
-	public String getIssueDesc() {
-		return issueDesc;
+	public String getIS_TITLE() {
+		return IS_TITLE;
 	}
-	public void setIssueDesc(String issueDesc) {
-		this.issueDesc = issueDesc;
+	public void setIS_TITLE(String iS_TITLE) {
+		IS_TITLE = iS_TITLE;
 	}
-	public String getWardNumber() {
-		return wardNumber;
+	public String getIS_DESC() {
+		return IS_DESC;
 	}
-	public void setWardNumber(String wardNumber) {
-		this.wardNumber = wardNumber;
+	public void setIS_DESC(String iS_DESC) {
+		IS_DESC = iS_DESC;
 	}
-	public String getCreateTS() {
-		return createTS;
+	public String getIS_LOC() {
+		return IS_LOC;
 	}
-	public void setCreateTS(String createTS) {
-		this.createTS = createTS;
+	public void setIS_LOC(String iS_LOC) {
+		IS_LOC = iS_LOC;
 	}
-	public String getLastupdateTS() {
-		return lastupdateTS;
+	public String getIS_MAP_LOC() {
+		return IS_MAP_LOC;
 	}
-	public void setLastupdateTS(String lastupdateTS) {
-		this.lastupdateTS = lastupdateTS;
+	public void setIS_MAP_LOC(String iS_MAP_LOC) {
+		IS_MAP_LOC = iS_MAP_LOC;
 	}
-	public String getIssueId() {
-		return issueId;
+	public String getIS_ALLOC_TO() {
+		return IS_ALLOC_TO;
 	}
-	public void setIssueId(String issueId) {
-		this.issueId = issueId;
+	public void setIS_ALLOC_TO(String iS_ALLOC_TO) {
+		IS_ALLOC_TO = iS_ALLOC_TO;
 	}
-	public String getIssueImageShort() {
-		return issueImageShort;
+	public String getIS_STATUS() {
+		return IS_STATUS;
 	}
-	public void setIssueImageShort(String issueImageShort) {
-		this.issueImageShort = issueImageShort;
+	public void setIS_STATUS(String iS_STATUS) {
+		IS_STATUS = iS_STATUS;
 	}
-	public String getIssueImageLong() {
-		return issueImageLong;
+	public String getIS_LOGGED_BY() {
+		return IS_LOGGED_BY;
 	}
-	public void setIssueImageLong(String issueImageLong) {
-		this.issueImageLong = issueImageLong;
-	}	
+	public void setIS_LOGGED_BY(String iS_LOGGED_BY) {
+		IS_LOGGED_BY = iS_LOGGED_BY;
+	}
+	public String getIS_LOGGED_TS() {
+		return IS_LOGGED_TS;
+	}
+	public void setIS_LOGGED_TS(String iS_LOGGED_TS) {
+		IS_LOGGED_TS = iS_LOGGED_TS;
+	}
+	public String getIS_ACCEPTED_TS() {
+		return IS_ACCEPTED_TS;
+	}
+	public void setIS_ACCEPTED_TS(String iS_ACCEPTED_TS) {
+		IS_ACCEPTED_TS = iS_ACCEPTED_TS;
+	}
+	public String getIS_RESOLVED_TS() {
+		return IS_RESOLVED_TS;
+	}
+	public void setIS_RESOLVED_TS(String iS_RESOLVED_TS) {
+		IS_RESOLVED_TS = iS_RESOLVED_TS;
+	}
+	public String getIS_ID() {
+		return IS_ID;
+	}
+	public void setIS_ID(String iS_ID) {
+		IS_ID = iS_ID;
+	}
+	
+	
+	
 	
 
 }

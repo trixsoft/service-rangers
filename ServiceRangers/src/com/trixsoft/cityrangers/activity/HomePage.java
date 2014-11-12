@@ -42,17 +42,6 @@ public class HomePage extends Activity {
 			}
 		});
 
-		// IssueList Button click event
-		issueList.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-				// Launching IssueList Activity
-				Intent i = new Intent(getApplicationContext(), IssueList.class);
-				startActivity(i);
-			}
-		});
-
 		// IssueListCustom Button click event
 		issueListCustom.setOnClickListener(new View.OnClickListener() {
 
@@ -64,6 +53,7 @@ public class HomePage extends Activity {
 				startActivity(i);
 			}
 		});
+		
 
 	}
 

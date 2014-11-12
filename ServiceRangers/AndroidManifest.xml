@@ -43,6 +43,11 @@
             android:label="@string/title_activity_issueListCustom" >
         </activity>
         
+          <activity
+            android:name="com.trixsoft.cityrangers.activity.IssueDetailsActivity"
+            android:label="@string/title_issue_detail" >
+        </activity>
+        
     </application>
 
 </manifest>

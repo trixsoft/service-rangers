@@ -1,41 +1,56 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="250dp"
-    android:layout_height="600dp"
-    android:background="@drawable/bg" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/issuelistbg"
+    android:gravity="left" >
 
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:textAlignment="viewStart" >
 
         <TextView
             android:id="@+id/issueId"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
 
         <TableLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:textAlignment="viewStart" >
 
             <TableRow
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:textAlignment="inherit" >
 
                 <TextView
                     android:id="@+id/issueDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:textAlignment="viewStart"
+                    android:textStyle="bold" />
+
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:textAlignment="inherit" >
 
                 <TextView
                     android:id="@+id/wardNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
+                    android:layout_weight="1" android:layout_gravity="left|center_vertical"
+                    android:textAlignment="viewStart" />
+
             </TableRow>
         </TableLayout>
     </TableRow>

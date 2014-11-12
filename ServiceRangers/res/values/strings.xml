@@ -8,9 +8,10 @@
     <string name="copyRight">Designed by TrixSoft Pvt. Ltd.</string>
     <string name="title_activity_check_in">CheckINActivity</string>
     <string name="title_activity_issueList">IssueList</string>
-    <string name="title_activity_issueListCustom">IssueListCustom</string>
+    <string name="title_activity_issueListCustom">Assigned Issue List</string>
     <string name="issueList">issueList</string>
-    <string name="issueListCustom">issueListCustom</string>
+    <string name="issueListCustom">Assigned Issue List</string>
+    <string name="title_issue_detail">IssueDetail</string>
     <string name="list01">list01</string>
 
     

@@ -3,8 +3,8 @@
     android:baselineAligned="false"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    tools:context=".IssueListCustom" >
+    tools:context=".IssueListCustom"
+    android:background="@drawable/bg"  >
 
     <!-- Main ListView
          Always give id value as list(@android:id/list)

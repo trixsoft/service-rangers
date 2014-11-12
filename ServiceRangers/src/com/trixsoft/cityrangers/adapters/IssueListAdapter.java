@@ -96,11 +96,11 @@ public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 				
 				tempValues = (IssuesModel) customListValuesArray.get(position);
 				Log.d("IssueListAdapter", "t1");
-				holder.issueId.setText(tempValues.getIssueId());
+				holder.issueId.setText(tempValues.getIS_ID());
 				Log.d("IssueListAdapter", "t2");
-				holder.issueDesc.setText(tempValues.getIssueDesc());
+				holder.issueDesc.setText(tempValues.getIS_TITLE());
 				Log.d("IssueListAdapter", "t3");
-				holder.wardNumber.setText(tempValues.getWardNumber());
+				holder.wardNumber.setText(tempValues.getIS_LOC());
 				Log.d("IssueListAdapter", "t4");
 
 				vi.setOnClickListener(new OnIssueClickListener(position));
