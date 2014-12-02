@@ -3,6 +3,8 @@ package com.trixsoft.cityrangers.model;
 import java.io.Serializable;
 
 public class IssuesModel implements Serializable  {
+
+	private static final long serialVersionUID = -4120697149037440516L;
 	private String IS_ID;
 	private String IS_TITLE;
 	private String IS_DESC;	

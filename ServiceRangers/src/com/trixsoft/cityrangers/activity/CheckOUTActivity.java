@@ -43,7 +43,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CheckINActivity extends FragmentActivity {
+public class CheckOUTActivity extends FragmentActivity {
 
 	private TextView mLatLng;
 	private TextView mAddress;
@@ -68,12 +68,11 @@ public class CheckINActivity extends FragmentActivity {
 	private PendingIntent pendingIntent;
 	private AlarmManager alarmManager;
 	
-	public void startAlarm() {
-		Log.d("TESTING ALARM ACTIVATION", "START ALARM");
+	public void stopAlarm() {
+		Log.d("TESTING ALARM ACTIVATION", "STOP ALARM");
 		alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-	    int interval = 1000;
-	    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
-	    Toast.makeText(this, "Alarm Set", Toast.LENGTH_SHORT).show();
+		alarmManager.cancel(pendingIntent);
+		
 	}
 
 	@Override
@@ -83,7 +82,7 @@ public class CheckINActivity extends FragmentActivity {
 
 		Intent alarmIntent = new Intent(this, PeriodicCheckInReceiver.class);
 		pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0);
-		startAlarm();
+		stopAlarm();
 
 		mLatLng = (TextView) findViewById(R.id.latlng);
 		mLastUp = (TextView) findViewById(R.id.lastup);

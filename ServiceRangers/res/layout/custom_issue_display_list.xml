@@ -2,26 +2,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentTop="true"
-    android:background="@drawable/issuelistbg"
+    android:background="#cccccc"
     android:gravity="left" >
 
     <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:textAlignment="viewStart" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        
+       	<TableLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#666666"
+            android:gravity="center">
+            
+       	    <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+       	        
+		       	<TextView
+		            android:id="@+id/issueId"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="#ff9900"
+		            android:textSize="25dp"	
+		            android:gravity="center"	
+		            android:textStyle="bold" />
+       	        
+       	    </TableRow>
+            
+        </TableLayout>
 
-        <TextView
-            android:id="@+id/issueId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold" />
+
 
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="40dp"
+            android:paddingLeft="10dp"
             android:textAlignment="viewStart" >
 
             <TableRow
@@ -35,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textAlignment="viewStart"
+                    android:textColor="#ff9900"
                     android:textStyle="bold" />
 
             </TableRow>
@@ -49,10 +67,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" android:layout_gravity="left|center_vertical"
+                    android:textColor="#000000"
                     android:textAlignment="viewStart" />
 
             </TableRow>
         </TableLayout>
     </TableRow>
+   
 
 </TableLayout>

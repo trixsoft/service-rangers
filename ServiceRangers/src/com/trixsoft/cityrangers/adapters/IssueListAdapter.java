@@ -2,7 +2,6 @@ package com.trixsoft.cityrangers.adapters;
 
 import java.util.ArrayList;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -60,6 +59,7 @@ public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 		public TextView wardNumber;
 		public TextView textWide;
 		//public ImageView image;
+		
 
 	}
 
@@ -82,6 +82,7 @@ public class IssueListAdapter extends BaseAdapter implements OnClickListener {
 				holder.issueId=(TextView) vi.findViewById(R.id.issueId);
 				holder.issueDesc = (TextView) vi.findViewById(R.id.issueDesc);
 				holder.wardNumber = (TextView) vi.findViewById(R.id.wardNumber);
+				
 				vi.setTag(holder);
 			} else
 			{

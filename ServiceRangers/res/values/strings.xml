@@ -3,18 +3,17 @@
 
     <string name="app_name">City Rangers</string>
     <string name="hello_world">Hello world!</string>
-     <string name="welcome">Welcome to NELLORE MAYOR WORKER TRACKING</string>
+    <string name="welcome">Welcome to NELLORE MAYOR WORKER TRACKING</string>
     <string name="action_settings">Settings</string>
     <string name="copyRight">Designed by TrixSoft Pvt. Ltd.</string>
     <string name="title_activity_check_in">CheckINActivity</string>
+    <string name="title_activity_check_out">CheckOUTActivity</string>
     <string name="title_activity_issueList">IssueList</string>
     <string name="title_activity_issueListCustom">Assigned Issue List</string>
     <string name="issueList">issueList</string>
     <string name="issueListCustom">Assigned Issue List</string>
     <string name="title_issue_detail">IssueDetail</string>
     <string name="list01">list01</string>
-
-    
     <string name="lastup">Updated:</string>
     <string name="lastlatlng">Last Location: </string>
     <string name="menu_settings">Menu Settings</string>
@@ -28,4 +27,7 @@
     <string name="view_position">View Position</string>
     <string name="send_position">Send Position</string>
     <string name="deviceID">Device ID</string>
+    <string name="google_maps_key">AIzaSyACP8z708Z-4c4Bk_xmDhG61HLexi0BPWo</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
 </resources>

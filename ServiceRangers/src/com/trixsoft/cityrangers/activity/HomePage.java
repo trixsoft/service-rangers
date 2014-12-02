@@ -7,31 +7,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 public class HomePage extends Activity {
 
-	Button checkIN;
-	Button issueList;
-	Button issueListCustom;
+	ImageButton checkIn;
+	ImageButton checkOut;
+	ImageButton issues;
 
-	/*
-	 * Button checkOUT;
-	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_page);
 
-		checkIN = (Button) findViewById(R.id.button1);
-		issueList = (Button) findViewById(R.id.issueList);
-		issueListCustom = (Button) findViewById(R.id.issueListCustom);
-		/*
-		 * checkOUT=(Button) findViewById(R.id.checkOUT);
-		 */
+		checkIn = (ImageButton) findViewById(R.id.checkIn);
+		checkOut = (ImageButton) findViewById(R.id.checkOut);
+		issues = (ImageButton) findViewById(R.id.issues);
 
-		// Check IN Button click event
-		checkIN.setOnClickListener(new View.OnClickListener() {
+		// Check IN ImageButton click event
+		checkIn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
@@ -42,8 +36,20 @@ public class HomePage extends Activity {
 			}
 		});
 
-		// IssueListCustom Button click event
-		issueListCustom.setOnClickListener(new View.OnClickListener() {
+		// Check Out ImageButton click event
+		checkOut.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				// Launching CheckIN Activity
+				Intent i = new Intent(getApplicationContext(),
+						CheckOUTActivity.class);
+				startActivity(i);
+			}
+		});
+		
+		// IssueListCustom ImageButton click event
+		issues.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View view) {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:columnCount="1" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="0"
+        android:text="@string/welcome" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_column="0"
+        android:layout_gravity="right|top"
+        android:layout_row="1"
+         android:background="@drawable/btn_checkout"
+        android:text="Check Out" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="1"
+        android:background="@drawable/btn_checkin"
+        android:text="Check IN" />
+
+    
+        <Button
+        android:id="@+id/issueListCustom"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="20dp"
+        android:layout_row="2"
+        android:background="@drawable/btn_issues"
+        android:text="Issue List" />
+     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/issueList"
+        android:layout_below="@+id/issueList"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="61dp"
+        android:text="@string/copyRight" />
+
+</GridLayout>

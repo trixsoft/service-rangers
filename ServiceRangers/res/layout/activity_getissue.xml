@@ -2,69 +2,81 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/background"
     android:orientation="vertical" >
-    
-   <!-- Product id (pid) - will be HIDDEN - used to pass to other activity -->
+
+    <!-- Product id (pid) - will be HIDDEN - used to pass to other activity -->
+
     <TextView
         android:id="@+id/pid"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:visibility="gone" />
- 
-    
-    <!-- Issue Label -->
-    <TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Issue Description"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:paddingTop="10dip"
-        android:textSize="17dip"/>
-    
-    <!-- Issue Description-->
-	<TextView android:id="@+id/issueDesc"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_margin="5dip"
-	    android:layout_marginBottom="15dip"
-	    android:singleLine="true"/>
-	
-	<!-- Ward Number Label-->
-    <TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Ward Number"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:paddingTop="10dip"
-        android:textSize="17dip"/>
-    
-    <!-- Ward Number -->
-	<TextView android:id="@+id/wardNumber" 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_margin="5dip"
-	    android:layout_marginBottom="15dip"
-	    android:singleLine="true"
-	    android:inputType="numberDecimal"/>
-	
-	<!-- Last Updated TS Label -->
-    <TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Last Updated Timestamp Label"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:paddingTop="10dip"
-        android:textSize="17dip"/>
-    
-    <!-- Last updated TS -->
-	<TextView android:id="@+id/lastUpdatedTS" 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_margin="5dip"
-	    android:layout_marginBottom="15dip"	    
-	    android:gravity="top"/>
-	
 
-	
+    <!-- Issue Label -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:text="Issue Description"
+        android:textSize="17dip" />
+
+    <!-- Issue Description -->
+
+    <TextView
+        android:id="@+id/issueDesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true" />
+
+    <!-- Ward Number Label -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:text="Ward Number"
+        android:textSize="17dip" />
+
+    <!-- Ward Number -->
+
+    <TextView
+        android:id="@+id/wardNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:inputType="numberDecimal"
+        android:singleLine="true" />
+
+    <!-- Last Updated TS Label -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:text="Last Updated Timestamp Label"
+        android:textSize="17dip" />
+
+    <!-- Last updated TS -->
+
+    <TextView
+        android:id="@+id/lastUpdatedTS"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:gravity="top" />
+
+    
+
 </LinearLayout>

@@ -4,9 +4,9 @@
     android:id="@+id/TableLayout01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+     android:background="@drawable/background"
     android:stretchColumns="1"
-    tools:context="com.trixsoft.cityrangers.activity.CheckINActivity" >
+    tools:context="com.trixsoft.cityrangers.activity.CheckOUTActivity" >
 
     <TableRow android:id="@+id/TableRow01" >
 
@@ -14,14 +14,12 @@
             android:id="@+id/label_latlng"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/latlng"
-            android:textColor="#ffffff" />
+            android:text="@string/latlng" />
 
         <TextView
             android:id="@+id/latlng"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content" />
     </TableRow>
 
     <TableRow android:id="@+id/TableRow03" >
@@ -30,14 +28,12 @@
             android:id="@+id/label_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
             android:text="@string/address" />
 
         <TextView
             android:id="@+id/address"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content" />
     </TableRow>
 
     <TableRow android:id="@+id/TableRow04" >
@@ -46,14 +42,12 @@
             android:id="@+id/label_lastup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
             android:text="@string/lastup" />
 
         <TextView
             android:id="@+id/lastup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content" />
     </TableRow>
 
     <TableRow android:id="@+id/TableRow07" >
@@ -62,14 +56,12 @@
             android:id="@+id/label_deviceID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
             android:text="@string/deviceID" />
 
         <TextView
             android:id="@+id/deviceID"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content" />
     </TableRow>
 
 </TableLayout>
